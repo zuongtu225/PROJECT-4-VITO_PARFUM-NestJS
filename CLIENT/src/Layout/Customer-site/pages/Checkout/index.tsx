@@ -15,7 +15,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { deleteCart, updateProduct } from "../../../../Api";
 import { createOrderItem } from "../../../../Api/orderItem";
 import { createAddress } from "../../../../Api/address";
-import Paypal from "./paypayl";
+// import Paypal from "./paypayl";
 import { BiUser } from "react-icons/bi";
 import { FiPhoneCall } from "react-icons/fi";
 import { io } from "socket.io-client";
@@ -407,12 +407,13 @@ const Checkout = () => {
                 ĐẶT HÀNG
               </button>
             ) : (
-              <Paypal
-                hasErrorQuantity={hasErrorQuantity}
-                infoAddress={infoAddress}
-                amount={Math.round(total / 24325)}
-                paymentPaypal={paymentPaypal}
-              />
+              <></>
+              // <Paypal
+              //   hasErrorQuantity={hasErrorQuantity}
+              //   infoAddress={infoAddress}
+              //   amount={Math.round(total / 24325)}
+              //   paymentPaypal={paymentPaypal}
+              // />
             )}
           </div>
         </div>

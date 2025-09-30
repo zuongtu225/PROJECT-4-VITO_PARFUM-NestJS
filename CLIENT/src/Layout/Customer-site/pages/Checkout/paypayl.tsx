@@ -20,7 +20,7 @@ const Paypal = (props: Props) => {
   return (
     <div>
       <ToastContainer />
-      {hasErrorQuantity === false ? (
+      {/* {hasErrorQuantity === false ? (
         <PayPalButtons
           createOrder={(_data, actions) => {
             {
@@ -45,7 +45,7 @@ const Paypal = (props: Props) => {
         <p className="pt-10 pb-10 text-red-600">
           Không thể thanh toán vì sản phẩm không đủ số lượng trong kho
         </p>
-      )}
+      )} */}
     </div>
   );
 };

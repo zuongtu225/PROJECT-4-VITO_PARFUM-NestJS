@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getApiProducts, getDetailUser } from "../../../../store/action";
@@ -7,6 +7,16 @@ import { BsCartPlus } from "react-icons/bs";
 import { GoArrowRight } from "react-icons/go";
 import { Carousel } from "@material-tailwind/react";
 import { IProduct } from "../../../../Interface";
+const ban1 = require("../../../../assets/ban1.jpg");
+const ban2 = require("../../../../assets/ban2.jpg");
+const ban3 = require("../../../../assets/ban3.jpg");
+const blog1 = require("../../../../assets/blog1.jpg");
+const blog2 = require("../../../../assets/blog2.jpg");
+const blog3 = require("../../../../assets/blog3.png");
+const blog4 = require("../../../../assets/blog4.jpg");
+const blog5 = require("../../../../assets/blog5.jpg");
+const blog6 = require("../../../../assets/blog6.jpg");
+
 const Home = () => {
   const dispatch = useDispatch<AppDispatch>();
   const auth: any = localStorage.getItem("auth") || "";
@@ -122,37 +132,22 @@ const Home = () => {
       </div>
       {/* <!-- __________HOME-BLOCK___start --> */}
       <div className="home-banner-block container m-3 ">
-        <div className="block-man home-block relative">
-          <img
-            src="https://theme.hstatic.net/1000340570/1000964732/14/banner-nu-desk.jpg?v=2850"
-            alt=""
-          />
-          <NavLink className="absolute right-8 text-white " to={"/male"}>
-            <h1 className="flex items-center pl-[170px]  gap-2">
-              NƯỚC HOA NAM <GoArrowRight />
-            </h1>
+        <div className="block-man home-block  relative">
+          <img src={ban1} alt="" />
+          <NavLink className="absolute text-white" to={"/male"}>
+            <h1>NƯỚC HOA NAM</h1>
           </NavLink>
         </div>
         <div className="block-woman home-block relative">
-          <img
-            src="https://theme.hstatic.net/1000340570/1000964732/14/banner-nam-desk.jpg?v=2850"
-            alt=""
-          />
-          <NavLink className="absolute right-8 text-white " to={"/female"}>
-            <h1 className="flex items-center pl-[170px]  gap-2">
-              NƯỚC HOA NỮ <GoArrowRight />
-            </h1>
+          <img src={ban2} alt="" />
+          <NavLink className="pl-[10px]" to={"/female"}>
+            <h1>NƯỚC HOA NỮ</h1>
           </NavLink>
         </div>
         <div className="block-niche home-block relative ">
-          <img
-            src="https://theme.hstatic.net/1000340570/1000964732/14/banner-niche-desk.jpg?v=2850"
-            alt=""
-          />
-          <NavLink className="absolute  text-white   " to={"/male"}>
-            <h1 className="flex items-center gap-2 pl-[170px] ">
-              NƯỚC HOA NICHE <GoArrowRight />
-            </h1>
+          <img src={ban3} alt="" />
+          <NavLink className="absolute text-white" to={"/male"}>
+            <h1>NƯỚC HOA NICHE</h1>
           </NavLink>
         </div>
       </div>
@@ -218,46 +213,31 @@ const Home = () => {
         <div className="blog-content container">
           <div className="item-blog cursor-pointer">
             <div className="blog-img">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcKWXi1kk_9NTMx7tjUpIO3wjPmhIYFjtq8w&usqp=CAU"
-                alt=""
-              />
+              <img src={blog1} alt="" />
             </div>
             <p>COLE SPROUSE CÙNG THƯƠNG HIỆU CHANEL</p>
           </div>
           <div className="item-blog cursor-pointer">
             <div className="blog-img">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVBjmjh8fICY8LrqWBl6AmJmWExFYTcZowZw&usqp=CAU"
-                alt=""
-              />
+              <img src={blog2} alt="" />
             </div>
             <p>MÙI HƯƠNG MỚI CỦA NƯỚC HOA HIỆN ĐẠI</p>
           </div>
           <div className="item-blog cursor-pointer">
             <div className="blog-img">
-              <img
-                src="https://i.ytimg.com/vi/W_DViGTuNPE/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAhSFaoE8NJ6lzNCX_G8QN5-0o0wQ"
-                alt=""
-              />
+              <img src={blog3} alt="" />
             </div>
             <p>CHUẨN VỊ ĐÀN ÔNG CÙNG COMBO NƯỚC HOA PHÁI MEN</p>
           </div>
           <div className="item-blog cursor-pointer">
             <div className="blog-img">
-              <img
-                src="https://blogscdn.thehut.net/app/uploads/sites/2296/2022/12/black-opium_1686207039.jpg"
-                alt=""
-              />
+              <img src={blog4} alt="" />
             </div>
             <p>DÀN SAO HÀN QUỐC PR CHO HÃNG GUCCI</p>
           </div>
           <div className="item-blog cursor-pointer">
             <div className="blog-img">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxDRBZmUaQP9lkm7uEru-B6oaRlhwc25ETNg&usqp=CAU"
-                alt=""
-              />
+              <img src={blog5} alt="" />
             </div>
             <p>
               BỘ SƯU TẬP NƯỚC HOA PHÁP ĐẲNG CẤP CỦA MỘT NGƯỜI NỔI TIẾNG TRUNG
@@ -266,10 +246,7 @@ const Home = () => {
           </div>
           <div className="item-blog  cursor-pointer">
             <div className="blog-img">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3po7KqnaLeTfxcrrbK84UN4BlOI_239l-2BEpHMzancWrfLtX7uEQBH_KlCgHe_hmEuU&usqp=CAU"
-                alt=""
-              />
+              <img src={blog6} alt="" />
             </div>
             <p>ẤM ÁP MÙI HƯƠNG NƯỚC HOA NARCISO CÙNG VỚI TÌNH NHÂN</p>
           </div>

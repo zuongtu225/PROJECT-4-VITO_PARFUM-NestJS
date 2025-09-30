@@ -16,7 +16,7 @@ import CategoryManager from "./Layout/Admin-site/pages/Category";
 import BrandsManager from "./Layout/Admin-site/pages/Brands";
 import PaymentManager from "./Layout/Admin-site/pages/Payments";
 import MaleProducts from "./Layout/Customer-site/pages/products/MaleProducts";
-import Checkout from "./Layout/Customer-site/pages/checkout";
+// import Checkout from "./Layout/Customer-site/pages/checkout";
 import Profile from "./Layout/Customer-site/pages/profile";
 import HistoryOrders from "./Layout/Customer-site/pages/history_order";
 import VerifyLogin from "./Layout/Auth/verify-google";
@@ -36,7 +36,7 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="cart" element={<CustomerCart />}></Route>
         <Route path="history" element={<HistoryOrders />}></Route>
-        <Route path="checkout" element={<Checkout />}></Route>
+        {/* <Route path="checkout" element={<Checkout />}></Route> */}
         <Route path="male" element={<MaleProducts />}></Route>
         <Route path="female" element={<FemaleProducts />}></Route>
         <Route path="detail/:id" element={<ProductsDetail />}></Route>
